@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { GiphyFetch } from "@giphy/js-fetch-api";
 
-import Error from "./components/Error";
+// import Error from "./components/Error";
 import TextLists from "./components/TextLists";
 import Item from "./components/Item";
 
