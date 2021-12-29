@@ -12,7 +12,6 @@ function App() {
   const [value, setValue] = useState("")
   const [arrayValue, setArrayValue] = useState([])
   const [result, setResult] = useState([])
-  const [err, setErr] = useState(false)
 
   function addValue() {
     setArrayValue((preVal) => {
@@ -22,15 +21,6 @@ function App() {
   }
 
   const handleSubmit = (e) => {
-    if (value.length === 0) {
-      alert('Length is 0, please insert text before submitting')
-      setErr(true)
-      return
-    }
-
-    console.log(value)
-
-
     const apiCall = async () => {
       const res = await giphy.animate(value, { limit: 20 })
       console.log(res)
@@ -39,7 +29,6 @@ function App() {
 
     apiCall()
     setValue('')
-    setErr(false)
   }
 
 
